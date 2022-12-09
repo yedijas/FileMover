@@ -17,6 +17,7 @@ namespace FileMover
             string from = ConfigurationManager.AppSettings["from"];
             string to = ConfigurationManager.AppSettings["to"];
 
+            FileMoverLib.FileMover.ImpersonateAndCopy(domainName, userName, password, from, to);
             FileMoverLib.FileMover.ImpersonateAndMove(domainName, userName, password, from, to);
         }
     }
